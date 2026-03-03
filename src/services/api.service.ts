@@ -9,6 +9,20 @@ export interface Professor {
   patronus: string;
 }
 
+export interface Aluno {
+  id: number;
+  name: string;
+  house: string;
+  image: string;
+  patronus: string;
+  ancestry: string;
+}
+
+
+
+//kkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkk
+
+
 @Injectable({
   providedIn: 'root',
 })
@@ -24,7 +38,7 @@ export class Api {
   }
 
   getAlunos() {
-    return this.http.get<Professor>(this.apiAlunos);
+    return this.http.get<Aluno[]>(this.apiAlunos);
   }
 
   getFeiticos() {

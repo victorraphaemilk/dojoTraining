@@ -1,1 +1,14 @@
-<p>estudantes works!</p>
+<section>
+    <div class="alunos">
+        @for (alunos of estudantes(); track alunos.id){
+            @if(!(alunos.image === "")) {
+                <div class="card">
+                    <img [src]="alunos.image" [alt]="alunos.name">
+                    <h2>{{alunos.name}}</h2>
+                    <p>{{alunos.house}}</p>
+                    <p>{{alunos.patronus}}</p>
+                </div>
+            }
+        }
+    </div>
+</section>
