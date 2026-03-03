@@ -1,0 +1,75 @@
+$gold: #d4af37;
+$dark-magic: #1a1a1a;
+$parchment: #f4e4bc;
+$font-magic: 'Cinzel', serif;
+
+
+
+
+.hogwarts-footer {
+  background: linear-gradient(to top, $dark-magic, #2c2c2c);
+  color: $parchment;
+  padding: 3rem 1rem 0;
+  font-family: $font-magic;
+  border-top: 3px double $gold;
+  text-align: center;
+
+  .footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    max-width: 1200px;
+    margin: 0 auto;
+
+    @media (min-width: 768px) {
+      flex-direction: row;
+      justify-content: space-around;
+    }
+  }
+
+  .footer-section {
+    h3 {
+      color: $gold;
+      font-size: 1.1rem;
+      margin-bottom: 0.5rem;
+      letter-spacing: 1px;
+    }
+
+    p {
+      font-size: 0.9rem;
+      opacity: 0.8;
+      margin: 5px 0;
+    }
+
+    small {
+      display: block;
+      margin-top: 10px;
+      font-style: italic;
+      color: darken($parchment, 20%);
+    }
+  }
+
+  .footer-crest {
+    .crest-placeholder {
+      font-size: 2.5rem;
+      color: $gold;
+      border: 2px solid $gold;
+      width: 60px;
+      height: 60px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      box-shadow: 0 0 15px rgba(212, 175, 55, 0.3);
+      text-shadow: 0 0 5px $gold;
+    }
+  }
+
+  .gold-bar {
+    height: 5px;
+    background: linear-gradient(90deg, transparent, $gold, transparent);
+    margin-top: 2rem;
+    width: 100%;
+  }
+}

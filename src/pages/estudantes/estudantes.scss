@@ -1,0 +1,65 @@
+$gold: #d4af37;
+$parchment: #f4e4bc;
+
+.alunos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 25px;
+  padding: 20px;
+
+  .card {
+    background: $parchment;
+    border: 1px solid #c0a080;
+    padding: 15px;
+    box-shadow: 5px 5px 15px rgba(0,0,0,0.3);
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+
+    // Efeito de "Foto de Jornal" (Movimento sutil)
+    &:hover {
+      transform: scale(1.05) rotate(-1deg);
+      box-shadow: 0 0 20px rgba($gold, 0.4);
+      
+      img {
+        filter: sepia(0); // A imagem "ganha vida" ao passar o mouse
+      }
+    }
+
+    img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border: 4px solid white; // Moldura de foto antiga
+      box-shadow: inset 0 0 10px rgba(0,0,0,0.5);
+      filter: sepia(0.6) contrast(1.1);
+      transition: filter 0.5s ease;
+    }
+
+    h2 {
+      font-family: 'Cinzel', serif;
+      font-size: 1.2rem;
+      margin: 15px 0 5px;
+      color: #2c2119;
+    }
+
+    p {
+      margin: 2px 0;
+      font-size: 0.9rem;
+      font-family: 'Crimson Text', serif;
+
+      // Estilo da Casa
+      &:first-of-type {
+        font-weight: bold;
+        color: #740001; // Cor base, você pode variar por classe depois
+        text-transform: uppercase;
+      }
+
+      // Estilo do Patrono
+      &:last-of-type {
+        color: #5d8aa8;
+        font-style: italic;
+        &::before { content: '🪄 '; }
+      }
+    }
+  }
+}

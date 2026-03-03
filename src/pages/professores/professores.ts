@@ -1,9 +1,10 @@
 import { Component, inject, signal } from '@angular/core';
 import { Api, Professor } from '../../services/api.service';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-professores',
-  imports: [],
+  imports: [CommonModule],
   templateUrl: './professores.html',
   styleUrl: './professores.scss',
 })

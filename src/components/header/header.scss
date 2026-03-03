@@ -1,0 +1,64 @@
+$gold: #d4af37;
+$burgundy: #740001; 
+$parchment: #f4e4bc;
+$dark-magic: #1a1a1a;
+$font-magic: 'Cinzel', serif;
+
+header {
+  background: linear-gradient(to bottom, $dark-magic, #2c2c2c);
+  padding: 1.5rem 0;
+  border-bottom: 3px double $gold;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+  font-family: $font-magic;
+
+  nav {
+    ul {
+      display: flex;
+      justify-content: center;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      gap: 30px;
+
+      li {
+        a {
+          text-decoration: none;
+          color: $parchment;
+          font-size: 1.2rem;
+          text-transform: uppercase;
+          letter-spacing: 2px;
+          transition: all 0.3s ease-in-out;
+          position: relative;
+
+          &:hover {
+            color: $gold;
+            text-shadow: 0 0 8px rgba(212, 175, 55, 0.8), 0 0 15px rgba(212, 175, 55, 0.4);
+            transform: scale(1.1);
+          }
+
+          &::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 1px;
+            bottom: -5px;
+            left: 50%;
+            background-color: $gold;
+            transition: all 0.3s ease;
+          }
+
+          &:hover::after {
+            width: 100%;
+            left: 0;
+          }
+        }
+      }
+    }
+  }
+}
+
+.active-link {
+  color: $gold !important;
+  font-weight: bold;
+  border-bottom: 1px solid $gold;
+}

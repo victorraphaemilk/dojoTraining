@@ -1,0 +1,68 @@
+$gold: #d4af37;
+$parchment: #f4e4bc;
+
+.feiticos {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 20px;
+  padding: 30px;
+
+  .card {
+    background: #fff9eb;
+    background-image: url('https://www.transparenttextures.com/patterns/pinstriped-suit.png'); 
+    border-left: 5px solid $gold; 
+    padding: 20px;
+    box-shadow: 3px 3px 10px rgba(0,0,0,0.1);
+    position: relative;
+    transition: all 0.3s ease;
+
+    &:hover {
+      background-color: #fff;
+      box-shadow: 0 0 15px rgba($gold, 0.5);
+      border-left-width: 15px;
+      
+      h2 {
+        color: #000;
+        text-shadow: 0 0 8px rgba($gold, 0.3);
+      }
+    }
+
+    h2 {
+      font-family: 'Cinzel', serif;
+      color: #3d2b1f;
+      margin: 0 0 10px 0;
+      font-size: 1.3rem;
+      letter-spacing: 1px;
+    }
+
+    p {
+      font-family: 'Georgia', serif;
+      font-style: italic;
+      line-height: 1.5;
+      color: #555;
+      margin: 0;
+      font-size: 1rem;
+      
+      &::before {
+        content: '"';
+      }
+      &::after {
+        content: '"';
+      }
+    }
+
+    
+    &::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 0;
+      border-width: 0 15px 15px 0;
+      border-style: solid;
+      border-color: #000 #000 #ddd #ddd;
+      background: #ddd;
+      display: block;
+      width: 0;
+    }
+  }
+}

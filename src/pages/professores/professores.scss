@@ -1,0 +1,91 @@
+$gold: #d4af37;
+$parchment: #f4e4bc;
+$dark-magic: #1a1a1a;
+$ink: #2c2119;
+
+section {
+  background-color: #0f0f0f; 
+  padding: 40px 20px;
+  min-height: 100vh;
+
+  .professores {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .card {
+    background: $parchment;
+    background-image: radial-gradient(circle, rgba(255,255,255,0.3) 0%, rgba(0,0,0,0.05) 100%);
+    border: 2px solid $gold;
+    outline: 5px solid $dark-magic; 
+    padding: 20px;
+    text-align: center;
+    border-radius: 0; 
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    transition: all 0.4s ease;
+    position: relative;
+    overflow: hidden;
+
+    &:hover {
+      transform: translateY(-10px) scale(1.02);
+      box-shadow: 0 15px 45px rgba($gold, 0.2);
+      outline-color: $gold;
+    }
+
+    img {
+      width: 100%;
+      height: 250px;
+      object-fit: cover;
+      border: 1px solid $gold;
+      filter: grayscale(30%) sepia(20%); // Toque vintage
+      margin-bottom: 15px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+    }
+
+    h2 {
+      font-family: 'Cinzel', serif;
+      color: $ink;
+      font-size: 1.4rem;
+      margin: 10px 0;
+      border-bottom: 1px solid rgba($gold, 0.5);
+      padding-bottom: 5px;
+    }
+
+    p {
+      font-family: 'Crimson Text', serif; // Uma fonte serifada elegante
+      color: lighten($ink, 10%);
+      margin: 5px 0;
+      font-style: italic;
+
+      // Estilo específico para a Casa (House)
+      &:first-of-type {
+        font-weight: bold;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        color: #740001; // Cor de destaque para a casa
+      }
+
+      // Estilo para o Patrono
+      &:last-of-type::before {
+        content: 'Patronus: ';
+        font-weight: bold;
+        color: #5d8aa8; // Tom azulado fantasmagórico
+      }
+    }
+
+    // Detalhe decorativo nos cantos
+    &::before {
+      content: '';
+      position: absolute;
+      top: 5px;
+      left: 5px;
+      right: 5px;
+      bottom: 5px;
+      border: 1px solid rgba($gold, 0.3);
+      pointer-events: none;
+    }
+  }
+}
