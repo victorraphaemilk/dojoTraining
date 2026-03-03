@@ -20,7 +20,7 @@ export class Api {
   private apiFeiticos = 'https://hp-api.onrender.com/api/spells';
 
   getProfessores() {
-    return this.http.get<Professores>(this.apiProfessores);
+    return this.http.get<Professores[]>(this.apiProfessores);
   }
 
   getAlunos() {

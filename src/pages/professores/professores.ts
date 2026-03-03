@@ -1,5 +1,5 @@
 import { Component, inject, signal } from '@angular/core';
-import { Api } from '../../services/api.service';
+import { Api, Professor } from '../../services/api.service';
 
 @Component({
   selector: 'app-professores',
@@ -12,4 +12,11 @@ export class Professores {
 
   private professorService = inject(Api);
 
+  ngOnInit(): void {
+    this.professorService.getProfessores().subscribe({
+      next: (data) => {
+        this.professores.set(data);
+      },
+    });
+  }
 }
