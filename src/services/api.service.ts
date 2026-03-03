@@ -8,6 +8,7 @@ export interface Professor {
   image: string;
   patronus: string;
 }
+//testefavicon
 
 export interface Aluno {
   id: number;
