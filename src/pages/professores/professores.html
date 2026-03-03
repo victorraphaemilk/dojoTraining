@@ -1,3 +1,14 @@
 <section>
+    <div class="professres">tr
+        @for (professor of professores(); track professor.id){
+            <div class="card">
+                <img [src]="professor.image" [alt]="professor.nome">
+                <h2>{{professor.nome}}</h2>
+                <p>{{professor.house}}</p>
+                <p>{{professor.patronus}}</p>
+            </div>
+        }
+
+    </div>
     
 </section>

@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { inject, Injectable } from '@angular/core';
 
-export interface Professores {
+export interface Professor {
   id: number;
   nome: string;
   house: string;
@@ -20,15 +20,15 @@ export class Api {
   private apiFeiticos = 'https://hp-api.onrender.com/api/spells';
 
   getProfessores() {
-    return this.http.get<Professores[]>(this.apiProfessores);
+    return this.http.get<Professor[]>(this.apiProfessores);
   }
 
   getAlunos() {
-    return this.http.get<Professores>(this.apiAlunos);
+    return this.http.get<Professor>(this.apiAlunos);
   }
 
   getFeiticos() {
-    return this.http.get<Professores>(this.apiFeiticos);
+    return this.http.get<Professor>(this.apiFeiticos);
   }
 
 } 

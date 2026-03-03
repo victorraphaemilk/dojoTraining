@@ -8,7 +8,7 @@ import { Api, Professor } from '../../services/api.service';
   styleUrl: './professores.scss',
 })
 export class Professores {
-  professores = signal<Professores[]>([]);
+  professores = signal<Professor[]>([]);
 
   private professorService = inject(Api);
 
