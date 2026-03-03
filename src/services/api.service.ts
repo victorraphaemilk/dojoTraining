@@ -15,9 +15,20 @@ export interface Professores {
 export class Api {
   private http = inject(HttpClient);
 
-  private api = 'https://hp-api.onrender.com/';
+  private apiProfessores = 'https://hp-api.onrender.com/api/characters/staff';
+  private apiAlunos = 'https://hp-api.onrender.com/api/characters/students';
+  private apiFeiticos = 'https://hp-api.onrender.com/api/spells';
 
   getProfessores() {
-    return this.http.get<Professores>;
+    return this.http.get<Professores>(this.apiProfessores);
   }
-}
+
+  getAlunos() {
+    return this.http.get<Professores>(this.apiAlunos);
+  }
+
+  getFeiticos() {
+    return this.http.get<Professores>(this.apiFeiticos);
+  }
+
+} 

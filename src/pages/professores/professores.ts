@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, inject, signal } from '@angular/core';
+import { Api } from '../../services/api.service';
 
 @Component({
   selector: 'app-professores',
@@ -6,4 +7,9 @@ import { Component } from '@angular/core';
   templateUrl: './professores.html',
   styleUrl: './professores.scss',
 })
-export class Professores {}
+export class Professores {
+  professores = signal<Professores[]>([]);
+
+  private professorService = inject(Api);
+
+}
