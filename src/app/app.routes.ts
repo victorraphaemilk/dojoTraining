@@ -5,7 +5,7 @@ import { Estudantes } from '../pages/estudantes/estudantes';
 
 export const routes: Routes = [
     {path:"", component:Principal},
-    {path: "/professores", component: Professores},
-    {path: "/estudantes", component: Estudantes},
+    {path: "professores", component: Professores},
+    {path: "estudantes", component: Estudantes},
     {path:"**", redirectTo:""}
 ];
