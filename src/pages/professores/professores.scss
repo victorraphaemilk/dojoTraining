@@ -4,7 +4,7 @@ $dark-magic: #1a1a1a;
 $ink: #2c2119;
 
 section {
-  background-color: #0f0f0f; 
+  background-color: #0f0f0f;
   padding: 40px 20px;
   min-height: 100vh;
 
@@ -18,13 +18,17 @@ section {
 
   .card {
     background: $parchment;
-    background-image: radial-gradient(circle, rgba(255,255,255,0.3) 0%, rgba(0,0,0,0.05) 100%);
+    background-image: radial-gradient(
+      circle,
+      rgba(255, 255, 255, 0.3) 0%,
+      rgba(0, 0, 0, 0.05) 100%
+    );
     border: 2px solid $gold;
-    outline: 5px solid $dark-magic; 
+    outline: 5px solid $dark-magic;
     padding: 20px;
     text-align: center;
-    border-radius: 0; 
-    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    border-radius: 0;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
     transition: all 0.4s ease;
     position: relative;
     overflow: hidden;
@@ -40,9 +44,9 @@ section {
       height: 250px;
       object-fit: cover;
       border: 1px solid $gold;
-      filter: grayscale(30%) sepia(20%); // Toque vintage
+      filter: grayscale(30%) sepia(20%);
       margin-bottom: 15px;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
     }
 
     h2 {
@@ -55,28 +59,25 @@ section {
     }
 
     p {
-      font-family: 'Crimson Text', serif; // Uma fonte serifada elegante
+      font-family: 'Crimson Text', serif;
       color: lighten($ink, 10%);
       margin: 5px 0;
       font-style: italic;
 
-      // Estilo específico para a Casa (House)
       &:first-of-type {
         font-weight: bold;
         text-transform: uppercase;
         letter-spacing: 1px;
-        color: #740001; // Cor de destaque para a casa
+        color: #740001;
       }
 
-      // Estilo para o Patrono
       &:last-of-type::before {
         content: 'Patronus: ';
         font-weight: bold;
-        color: #5d8aa8; // Tom azulado fantasmagórico
+        color: #5d8aa8;
       }
     }
 
-    // Detalhe decorativo nos cantos
     &::before {
       content: '';
       position: absolute;
