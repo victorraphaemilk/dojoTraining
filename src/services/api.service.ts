@@ -3,7 +3,7 @@ import { inject, Injectable } from '@angular/core';
 
 export interface Professor {
   id: number;
-  nome: string;
+  name: string;
   house: string;
   image: string;
   patronus: string;
