@@ -18,6 +18,12 @@ export interface Aluno {
   ancestry: string;
 }
 
+export interface Feitico {
+  id: string;
+  name: string;
+  description: string;
+}
+
 
 
 //kkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkk
@@ -42,7 +48,7 @@ export class Api {
   }
 
   getFeiticos() {
-    return this.http.get<Professor>(this.apiFeiticos);
+    return this.http.get<Feitico[]>(this.apiFeiticos);
   }
 
 } 
